@@ -1,0 +1,58 @@
+.Intro {
+    
+}
+.top-intro {
+    justify-content: center;
+    align-items: center;
+    padding: 50px 200px;
+    background-color: #f5f6f8;
+}
+.bottom-intro {
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+.intro-title {
+    text-align: center;
+    width: 450px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #007FC8;
+    margin-bottom: 50px;
+}
+.intro-text {
+    text-align: center;
+}
+.intro-step-item {
+    justify-content: center;
+    align-items: center;
+}
+.intro-step-icon .icon {
+    font-size: 60px;
+    color: #007FC8;
+}
+.intro-step-title {
+    margin: 40px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.intro-step-text {
+    font-weight: 14px;
+    color: #555;
+    width: 300px;
+    text-align: center;
+}
+.intro-step-btn {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background-color: #fc2754;
+    color: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.intro-next {
+    padding-top: 25px;
+    margin: 0 30px;
+    color: #007FC8;
+}
