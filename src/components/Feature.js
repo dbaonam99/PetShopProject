@@ -17,7 +17,7 @@ export default function Feature(props) {
                 {props.children}
             </div>
             <div className="right-feature" style={{width: `${right}%`}}>
-                <img src={props.img} width="100%" height="100%"></img>
+                <img src={props.img} width="100%" height="100%" alt=""></img>
             </div>
         </div>
     )
