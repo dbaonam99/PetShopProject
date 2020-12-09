@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../Styles/Feature.css'
-import '../App.css'
+import '../../Styles/Home.css'
+import '../../App.css'
 
 export default function Feature(props) {
 

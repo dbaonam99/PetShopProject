@@ -1,6 +1,6 @@
 import React from 'react'
-import '../Styles/Feature.css'
-import '../App.css'
+import '../../Styles/Home.css'
+import '../../App.css'
 import Feature from './Feature'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarker, faTint } from '@fortawesome/free-solid-svg-icons'
@@ -9,14 +9,32 @@ export default function Features(props) {
 
     return (
         <div className="Features">
+        <Feature
+            reverse={true}
+            img={"http://pe.heromc.net:4000/images/7f8238524e85775e5c8533f05fceef2a"}
+            color={"linear-gradient(to right, #00a5e1, rgba(0,127,200,0.5)),linear-gradient(#007fc8, #007fc8)"}
+        >
+            <div className="feature-intro flex">
+                <div className="feature-title" style={{color: '#FFF'}}>
+                    Như đã được thấy ở Amazon Original series
+                </div>
+                <div className="feature-text" style={{color: '#FFF'}}> 
+                    <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack, một loạt cuộc thi thực tế mới từ Prime Video, tôn vinh mối quan hệ vô song giữa những chú chó và những người bạn đồng hành của chúng. Được tổ chức bởi người đoạt huy chương vàng Lindsey Vonn và con chó Lucy của cô ấy, bộ truyện có mười hai đội chó và cha mẹ con người của chúng trong một cuộc phiêu lưu sử thi trên nhiều lục địa. Tractive tham gia cùng các đội khi họ đi khắp thế giới để đảm bảo mọi thí sinh bốn chân đều an toàn, vui vẻ và có thể theo dõi!</p>
+                    <br/><br/>
+                    <strong style={{fontSize: '18px'}}>Bạn không thể chờ đợi để xem?</strong>
+                    <br/>
+                    <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack sẽ công chiếu vào ngày 20 tháng 11 tại hơn 240 quốc gia và vùng lãnh thổ, độc quyền trên Prime Video. Truy cập amazon.com/ThePack để tìm hiểu thêm.</p>
+                </div>
+            </div>
+        </Feature>
             <Feature
                 reverse={false}
-                img={"https://tractive.com/static/images/sections/Tractive-GPS-IKATI-Tractive-GPS-DOG-2560.jpg"}
+                img={"http://pe.heromc.net:4000/images/cbb26668b9d6c74fe6f20bdeb17e774e"}
                 color={"#f5f6f8"}
             >
                 <div className="feature-intro flex">
                     <div className="feature-title">
-                        <strong>Tractive products</strong>  are robust and easy to use
+                        <strong>Sản phẩm Tractive</strong> mạnh mẽ và dễ sử dụng
                     </div>
                     <div className="feature-text">
                         Chúng tôi đã thiết kế Tractive GPS để dễ sử dụng cho mọi người, ở bất kỳ đâu. Nhờ các công nghệ tiên tiến, các thiết bị theo dõi Tractive GPS có thể được định vị chính xác và đáng tin cậy từ hầu hết mọi nơi trên thế giới, cho dù thú cưng của bạn đang ở sân sau hay ở phía bên kia địa cầu.

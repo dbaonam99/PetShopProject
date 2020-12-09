@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
-import '../Styles/Header.css'
+import '../../Styles/Home.css'
 
 export default function Header(props) {
     return (

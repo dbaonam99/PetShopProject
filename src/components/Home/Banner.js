@@ -1,11 +1,11 @@
 import React from 'react'
-import '../Styles/Banner.css'
-import '../App.css'
+import '../../Styles/Home.css'
+import '../../App.css'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Banner12 from '../assets/banner1.2.png'
-import Banner22 from '../assets/banner2.2.png'
+import Banner12 from '../../assets/banner1.2.png'
+import Banner22 from '../../assets/banner2.2.png'
 
 export default function Banner(props) {
 
