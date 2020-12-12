@@ -9,24 +9,24 @@ export default function Features(props) {
 
     return (
         <div className="Features">
-        <Feature
-            reverse={true}
-            img={"http://pe.heromc.net:4000/images/7f8238524e85775e5c8533f05fceef2a"}
-            color={"linear-gradient(to right, #00a5e1, rgba(0,127,200,0.5)),linear-gradient(#007fc8, #007fc8)"}
-        >
-            <div className="feature-intro flex">
-                <div className="feature-title" style={{color: '#FFF'}}>
-                    Như đã được thấy ở Amazon Original series
+            <Feature
+                reverse={true}
+                img={"http://pe.heromc.net:4000/images/7f8238524e85775e5c8533f05fceef2a"}
+                color={"linear-gradient(to right, #00a5e1, rgba(0,127,200,0.5)),linear-gradient(#007fc8, #007fc8)"}
+            >
+                <div className="feature-intro flex">
+                    <div className="feature-title" style={{color: '#FFF'}}>
+                        Như đã được thấy ở Amazon Original series
+                    </div>
+                    <div className="feature-text" style={{color: '#FFF'}}> 
+                        <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack, một loạt cuộc thi thực tế mới từ Prime Video, tôn vinh mối quan hệ vô song giữa những chú chó và những người bạn đồng hành của chúng. Được tổ chức bởi người đoạt huy chương vàng Lindsey Vonn và con chó Lucy của cô ấy, bộ truyện có mười hai đội chó và cha mẹ con người của chúng trong một cuộc phiêu lưu sử thi trên nhiều lục địa. Tractive tham gia cùng các đội khi họ đi khắp thế giới để đảm bảo mọi thí sinh bốn chân đều an toàn, vui vẻ và có thể theo dõi!</p>
+                        <br/><br/>
+                        <strong style={{fontSize: '18px'}}>Bạn không thể chờ đợi để xem?</strong>
+                        <br/>
+                        <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack sẽ công chiếu vào ngày 20 tháng 11 tại hơn 240 quốc gia và vùng lãnh thổ, độc quyền trên Prime Video. Truy cập amazon.com/ThePack để tìm hiểu thêm.</p>
+                    </div>
                 </div>
-                <div className="feature-text" style={{color: '#FFF'}}> 
-                    <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack, một loạt cuộc thi thực tế mới từ Prime Video, tôn vinh mối quan hệ vô song giữa những chú chó và những người bạn đồng hành của chúng. Được tổ chức bởi người đoạt huy chương vàng Lindsey Vonn và con chó Lucy của cô ấy, bộ truyện có mười hai đội chó và cha mẹ con người của chúng trong một cuộc phiêu lưu sử thi trên nhiều lục địa. Tractive tham gia cùng các đội khi họ đi khắp thế giới để đảm bảo mọi thí sinh bốn chân đều an toàn, vui vẻ và có thể theo dõi!</p>
-                    <br/><br/>
-                    <strong style={{fontSize: '18px'}}>Bạn không thể chờ đợi để xem?</strong>
-                    <br/>
-                    <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack sẽ công chiếu vào ngày 20 tháng 11 tại hơn 240 quốc gia và vùng lãnh thổ, độc quyền trên Prime Video. Truy cập amazon.com/ThePack để tìm hiểu thêm.</p>
-                </div>
-            </div>
-        </Feature>
+            </Feature>
             <Feature
                 reverse={false}
                 img={"http://pe.heromc.net:4000/images/cbb26668b9d6c74fe6f20bdeb17e774e"}
