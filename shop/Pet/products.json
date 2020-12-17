@@ -1,0 +1,124 @@
+{ 
+    "_id" : ObjectId("5fd5cea4dca491e19dfba728"), 
+    "productSale" : NumberInt(2), 
+    "productSold" : 40.0, 
+    "productDate" : "123", 
+    "productPrice" : NumberInt(1000000), 
+    "productFinalPrice" : NumberInt(1000000), 
+    "productCate" : "dog", 
+    "productName" : "GPS Tracker cho chó", 
+    "productVote" : [
+        {
+            "ratingName" : "nam", 
+            "ratingDate" : "Mon Dec 14 2020 23:55:35 GMT+0700 (+07)", 
+            "ratingContent" : "test", 
+            "ratingStart" : NumberInt(5), 
+            "ratingAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf"
+        }, 
+        {
+            "ratingName" : "hehe", 
+            "ratingDate" : "Mon Dec 14 2020 23:55:38 GMT+0700 (+07)", 
+            "ratingContent" : "123", 
+            "ratingStart" : NumberInt(3), 
+            "ratingAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf"
+        }, 
+        {
+            "ratingName" : "rtoll", 
+            "ratingDate" : "Mon Dec 14 2020 23:55:42 GMT+0700 (+07)", 
+            "ratingContent" : "123", 
+            "ratingStart" : NumberInt(5), 
+            "ratingAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf"
+        }, 
+        {
+            "ratingName" : "check", 
+            "ratingDate" : "Mon Dec 14 2020 23:55:45 GMT+0700 (+07)", 
+            "ratingContent" : "123", 
+            "ratingStart" : NumberInt(5), 
+            "ratingAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf"
+        }
+    ], 
+    "productColor" : [
+        {
+            "name" : "White", 
+            "productImg" : [
+                "https://tractive.com/static/images/product-images/trnjawh/tractive-gps-dog-4-packaging-en-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjawh/tractive-gps-dog-4-tracker-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjawh/tractive-gps-dog-4-tracker-front-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjawh/tractive-gps-dog-4-tracker-top.jpg", 
+                "https://tractive.com/static/images/product-images/trnjawh/tractive-gps-dog-4-tracker-back-400w.jpg"
+            ]
+        }, 
+        {
+            "name" : "Pink", 
+            "productImg" : [
+                "https://tractive.com/static/images/product-images/trnjapi/tractive-gps-dog-4-pink-packaging-en-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjapi/tractive-gps-dog-4-pink-tracker-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjapi/tractive-gps-dog-4-pink-tracker-front-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjapi/tractive-gps-dog-4-pink-tracker-top-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trnjapi/tractive-gps-dog-4-pink-tracker-back-400w.jpg"
+            ]
+        }
+    ], 
+    "productFeature" : [
+        "Theo dõi vị trí và giám sát hoạt động trên toàn thế giới", 
+        "Chế độ TRỰC TIẾP - cập nhật vị trí cứ sau 2-3 giây", 
+        "Nhận thông báo nếu con chó của bạn đi lang thang quá xa nhà", 
+        "Tận hưởng trải nghiệm theo dõi tốt nhất với công nghệ mạng mới nhất", 
+        "100% không thấm nước và chống va đập", 
+        "Pin lâu dài lên đến 5 ngày"
+    ], 
+    "productDes" : "Gặp gỡ thiết bị theo dõi GPS mới nhất của chúng tôi dành cho chó - thiết bị theo dõi chó với độ chính xác và tuổi thọ pin tốt hơn. Nó kết hợp công nghệ mạng mới nhất với các tính năng phổ biến nhất của chúng tôi để bạn yên tâm hơn nữa. Và với phạm vi không giới hạn, nó cho phép bạn xem vị trí và mức độ hoạt động của con chó của bạn ở hầu hết mọi nơi trên thế giới."
+}
+{ 
+    "_id" : ObjectId("5fd5ceb9dca491e19dfba731"), 
+    "productSale" : NumberInt(0), 
+    "productSold" : 11.0, 
+    "productDate" : "", 
+    "productPrice" : NumberInt(1000000), 
+    "productFinalPrice" : NumberInt(1000000), 
+    "productCate" : "cat", 
+    "productName" : "GPS Tracker cho mèo", 
+    "productVote" : [
+        {
+            "ratingName" : "2", 
+            "ratingDate" : "Sun Dec 13 2020 18:27:55 GMT+0700 (+07)", 
+            "ratingContent" : "2", 
+            "ratingStart" : NumberInt(5), 
+            "ratingAvt" : "https://icon-library.com/images/avatar-icon-png/avatar-icon-png-8.jpg"
+        }, 
+        {
+            "ratingName" : "test", 
+            "ratingDate" : "Sun Dec 13 2020 18:34:22 GMT+0700 (+07)", 
+            "ratingContent" : "oke", 
+            "ratingStart" : NumberInt(5), 
+            "ratingAvt" : "https://icon-library.com/images/avatar-icon-png/avatar-icon-png-8.jpg"
+        }, 
+        {
+            "ratingName" : "nam", 
+            "ratingDate" : "Tue Dec 15 2020 20:07:27 GMT+0700 (+07)", 
+            "ratingContent" : "hello", 
+            "ratingStart" : NumberInt(0), 
+            "ratingAvt" : "http://pe.heromc.net:4000/images/16f9bbf512b66a228f7978e34d8fb163"
+        }
+    ], 
+    "productColor" : [
+        {
+            "name" : "White", 
+            "productImg" : [
+                "https://tractive.com/static/images/product-images/trkat1/tractive-ikati-packaging-en-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trkat1/tractive-ikati-with-black-hunter-collar-400w.png", 
+                "https://tractive.com/static/images/product-images/trkat1/tractive-ikati-tracker-400w.png", 
+                "https://tractive.com/static/images/product-images/trkat1/tractive-ikati-size-comparison-400w.jpg", 
+                "https://tractive.com/static/images/product-images/trkat1/tractive-ikati-front-400w.jpg"
+            ]
+        }
+    ], 
+    "productFeature" : [
+        "Tất cả mọi thứ chỉ trong một cái vòng cổ bằng da", 
+        "Theo dõi vị trí và giám sát hoạt động trên toàn thế giới", 
+        "Chế độ TRỰC TIẾP - cập nhật vị trí cứ sau 2-3 giây", 
+        "Thời lượng pin lên đến 5 ngày", 
+        "Chống thấm nước, chống va đập và nặng 28g"
+    ], 
+    "productDes" : "Thấy được nơi chú mèo đang đi, và những nơi chú mèo đã tới với thiết bị đeo cổ. Theo dõi hoạt động & tập thể dục, cùng với vòng cổ bằng da HUNTER® với khóa an toàn cho mèo và bạn sẽ có được chiếc vòng đeo theo dõi mèo."
+}

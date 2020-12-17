@@ -1,0 +1,68 @@
+{ 
+    "_id" : ObjectId("5fd790139a1c80105e2f63e4"), 
+    "chatContent" : [
+        {
+            "text" : "123", 
+            "time" : "2020-12-14T16:17:23.721Z"
+        }, 
+        {
+            "text" : "zxc", 
+            "time" : "2020-12-14T16:59:20.322Z"
+        }
+    ], 
+    "userInfo" : {
+        "_id" : "5fd61267ed52078e2eea8b07", 
+        "userAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf", 
+        "userName" : "Dương Bảo Nam", 
+        "userTinh" : "Tỉnh Hà Giang", 
+        "userHuyen" : "Huyện Mèo Vạc", 
+        "userAddress" : "123123", 
+        "userPhone" : "1232", 
+        "userEmail" : "n", 
+        "userPassword" : "$2b$10$zbrzv/v8b1cZoiuZESDPYO7i0lmb//g6s7z/NNz6lLjkIwfygYg/m", 
+        "userRole" : "user", 
+        "userCreateDay" : "2020-12-13T13:08:55.950Z"
+    }, 
+    "sessionId" : "5fd61267ed52078e2eea8b07", 
+    "chatName" : "Dương Bảo Nam", 
+    "chatEmail" : "n"
+}
+{ 
+    "_id" : ObjectId("5fd7a091be6e21120412e925"), 
+    "chatContent" : [
+        {
+            "text" : "123123", 
+            "time" : "2020-12-14T17:27:45.169Z"
+        }, 
+        {
+            "fromAdmin" : true, 
+            "text" : "123", 
+            "time" : "2020-12-14T17:27:49.102Z"
+        }, 
+        {
+            "text" : "123", 
+            "time" : "2020-12-14T17:27:51.644Z"
+        }, 
+        {
+            "fromAdmin" : true, 
+            "text" : "123", 
+            "time" : "2020-12-14T17:27:56.057Z"
+        }
+    ], 
+    "userInfo" : {
+        "_id" : "5fd79dedbe6e21120412e924", 
+        "userAvt" : "http://pe.heromc.net:4000/images/16f9bbf512b66a228f7978e34d8fb163", 
+        "userName" : "nam", 
+        "userTinh" : "", 
+        "userHuyen" : "", 
+        "userAddress" : "", 
+        "userPhone" : "", 
+        "userEmail" : "nam", 
+        "userPassword" : "$2b$10$VFrVswFTnxSQGjmrx5W2oua578/zBhMl4kj2tONwwIt59D.Fjv7o6", 
+        "userRole" : "admin", 
+        "userCreateDay" : "2020-12-14T17:16:29.583Z"
+    }, 
+    "sessionId" : "5fd79dedbe6e21120412e924", 
+    "chatName" : "nam", 
+    "chatEmail" : "nam"
+}

@@ -1,0 +1,39 @@
+{ 
+    "_id" : ObjectId("5fd61267ed52078e2eea8b07"), 
+    "userAvt" : "http://localhost:4000/images/dc3c34d3b7655e11c51f044e62ae4fdf", 
+    "userName" : "Dương Bảo Nam", 
+    "userTinh" : "Tỉnh Hà Giang", 
+    "userHuyen" : "Huyện Mèo Vạc", 
+    "userAddress" : "123123", 
+    "userPhone" : "1232", 
+    "userEmail" : "n", 
+    "userPassword" : "$2b$10$zbrzv/v8b1cZoiuZESDPYO7i0lmb//g6s7z/NNz6lLjkIwfygYg/m", 
+    "userRole" : "user", 
+    "userCreateDay" : ISODate("2020-12-13T13:08:55.950+0000")
+}
+{ 
+    "_id" : ObjectId("5fd79dedbe6e21120412e924"), 
+    "userAvt" : "http://pe.heromc.net:4000/images/16f9bbf512b66a228f7978e34d8fb163", 
+    "userName" : "nam", 
+    "userTinh" : "Tỉnh Lâm Đồng", 
+    "userHuyen" : "Thành phố Bảo Lộc", 
+    "userAddress" : "233 bui thi xuan", 
+    "userPhone" : "123123", 
+    "userEmail" : "nam", 
+    "userPassword" : "$2b$10$VFrVswFTnxSQGjmrx5W2oua578/zBhMl4kj2tONwwIt59D.Fjv7o6", 
+    "userRole" : "admin", 
+    "userCreateDay" : ISODate("2020-12-14T17:16:29.583+0000")
+}
+{ 
+    "_id" : ObjectId("5fda3b2939160b2480aaa83f"), 
+    "userAvt" : "http://pe.heromc.net:4000/images/16f9bbf512b66a228f7978e34d8fb163", 
+    "userName" : "123", 
+    "userTinh" : "", 
+    "userHuyen" : "", 
+    "userAddress" : "", 
+    "userPhone" : "", 
+    "userEmail" : "123", 
+    "userPassword" : "$2b$10$GOddvUURUm2YhSW8JRR0IeudmBb40ErCRd0VBTBFI1kq2rbkSPDUS", 
+    "userRole" : "admin", 
+    "userCreateDay" : ISODate("2020-12-16T16:51:53.470+0000")
+}
