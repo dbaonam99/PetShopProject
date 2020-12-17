@@ -1,0 +1,36 @@
+mongoexport --db Shop --collection category --out category.json
+mongoexport --db Shop --collection chat --out chat.json
+mongoexport --db Shop --collection collection --out collection.json
+mongoexport --db Shop --collection emails --out emails.json
+mongoexport --db Shop --collection notice --out notice.json
+mongoexport --db Shop --collection order --out order.json 
+mongoexport --db Shop --collection todos --out todos.json
+mongoexport --db Shop --collection user --out user.json
+mongoexport --db Shop --collection vietnam --out vietnam.json
+mongoexport --db Shop --collection news --out news.json
+mongoexport --db Shop --collection products --out products.json
+
+
+db.category.drop()
+db.chat.drop()
+db.collection.drop()
+db.emails.drop()
+db.notice.drop()
+db.todos.drop()
+db.order.drop() 
+db.user.drop()
+db.vietnam.drop()
+db.news.drop()
+db.products.drop()
+
+mongoimport --db Shop --collection=category --file='category.json'
+mongoimport --db Shop --collection=chat --file='chat.json'
+mongoimport --db Shop --collection=collection --file='collection.json'
+mongoimport --db Shop --collection=emails --file='emails.json'
+mongoimport --db Shop --collection=notice --file='notice.json'
+mongoimport --db Shop --collection=order --file='order.json' 
+mongoimport --db Shop --collection=todos --file='todos.json'
+mongoimport --db Shop --collection=user --file='user.json'
+mongoimport --db Shop --collection=vietnam --file='vietnam.json'
+mongoimport --db Shop --collection=news --file='news.json' 
+
