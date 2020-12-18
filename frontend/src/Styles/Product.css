@@ -114,7 +114,7 @@
 }
 .productdetail-start {
     margin: 20px 0;
-    align-items: center;
+    justify-content: center;
 }
 .productdetail-start p {
     margin-left: 20px;
@@ -241,7 +241,7 @@
     background-color: #fc2754;
 }
 .productrecomend-list {
-    justify-content: center;
+    justify-content: center; 
 }
 .product {
     margin: 0 30px;
@@ -274,4 +274,112 @@
     color: #FFF; 
     background-color: #fc2754; 
     margin-top: 10px;
+}
+.productdetail-price-mobile {
+    display: none;
+    margin-bottom: 10px;
+}
+.productdetail-price-mobile p { 
+    margin: 0 20px 0 0 !important;
+    color: #007FC8 !important;
+    font-size: 20px !important;
+}
+.productdetail-addtocart-mobile {
+    display: none;
+    margin: 20px 0;
+    width: 200px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1150px) {
+    .ProductDetail {
+        padding-left: 30px;
+        height: max-content;
+    }
+    .productdetail-image-box {
+        width: 300px;
+    }
+    .productdetail-info {
+        padding: 30px;
+    }
+}
+@media only screen and (max-width: 1050px) {  
+    
+}
+@media only screen and (max-width: 900px) {   
+    .productdetail-addtocart {
+        display: none !important;
+    }
+    .productdetail-info {
+        /* padding-right: 0; */
+        flex-grow: 1;
+    }
+    .productdetail-price-mobile {
+        display: block !important;
+    }
+    .productdetail-addtocart-mobile {
+        display: block !important;
+    }
+}
+@media only screen and (max-width: 800px) {   
+    .ProductDetail {
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 30px 0 30px;
+    } 
+    .productdetail-info {
+        width: 100%;
+    }
+    .productdetail-info {
+        padding: 20px;
+    }
+    .productdetail-addtocart-mobile {
+        width: 100%;
+    }
+    .productdetail-addtocart-btn {
+        padding: 20px;
+    }
+    .invitejoin {
+        padding: 50px 20px;
+    }
+    .ask-list {
+        margin: 0 20px;
+    }
+}
+@media only screen and (max-width: 700px) {  
+    .ask-content {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .ask-list {
+        width: 100%;
+        margin: 0;
+    }
+    .productreview-item, .productreview-post-box {
+        width: 100%;
+    }
+    .productreview-list {
+        margin: 0 20px;
+    } 
+    .productreview-post {
+        margin: 20px;
+    }
+}
+@media only screen and (max-width: 450px) {   
+    .ProductDetail {
+        padding: 70px 20px 0 20px;
+    }
+    .productdetail-info {
+        padding: 20px 0;
+    }
+    .ask-content { 
+        padding: 0;
+    }
+    .productreview-list {
+        margin: 0px;
+    }
+    .productreview-post {
+        margin: 0px;
+    }
 }

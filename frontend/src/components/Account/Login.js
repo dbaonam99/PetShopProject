@@ -83,7 +83,7 @@ function Login(props) {
             </div>
             { tab === 0 &&
                 <div className="login-box flex-col">
-                    <div className="login-box-title"><strong>Sign</strong> in</div>
+                    <div className="login-box-title"><strong>Đăng</strong> nhập</div>
                     <div className="login-status">
                         { arrErr && <div className="login-err">{arrErr}</div>}
                         { arrSuccess && <div className="login-success">{arrSuccess}</div>}
@@ -96,28 +96,28 @@ function Login(props) {
                                 setEmail(event.target.value)
                             }}
                         ></input>
-                        <label>Password</label>
+                        <label>Mật khẩu</label>
                         <input
                             value={password}
                             onChange={(event)=>{
                                 setPassword(event.target.value)
                             }}
                         ></input>
-                        <button>Sign in</button>
+                        <button>Đăng nhập</button>
                     </form>
-                    <div className="login-forgot">Forgot password?</div>
-                    <div className="login-register" onClick={()=>{setTab(1)}}> New user? Create account</div>
+                    <div className="login-forgot">Quên mật khẩu?</div>
+                    <div className="login-register" onClick={()=>{setTab(1)}}>Tạo tài khoản mới</div>
                 </div>
             }
             { tab === 1 &&
                 <div className="login-box flex-col">
-                    <div className="login-box-title"><strong>Create</strong> acount</div>
+                    <div className="login-box-title"><strong>Tạo</strong> tài khoản</div>
                     <div className="login-status">
                         { arrErr && <div className="login-err">{arrErr}</div>}
                         { arrSuccess && <div className="login-success">{arrSuccess}</div>}
                     </div>
                     <form className="flex-col" onSubmit={sendAccount}>
-                        <label>Name *</label>
+                        <label>Tên *</label>
                         <input
                             value={name}
                             onChange={(event)=>{
@@ -131,16 +131,16 @@ function Login(props) {
                                 setEmail(event.target.value)
                             }}
                         ></input>
-                        <label>Password *</label>
+                        <label>Mật khẩu *</label>
                         <input
                             value={password}
                             onChange={(event)=>{
                                 setPassword(event.target.value)
                             }}
                         ></input>
-                        <button>Create account</button>
+                        <button>Tạo tài khoản</button>
                     </form> 
-                    <div className="login-register" onClick={()=>{setTab(0)}}>Already have an account?</div>
+                    <div className="login-register" onClick={()=>{setTab(0)}}>Đã có tài khoản?</div>
                 </div>
             }
         </div>

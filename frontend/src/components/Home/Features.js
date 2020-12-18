@@ -19,7 +19,7 @@ export default function Features(props) {
                         Như đã được thấy ở Amazon Original series
                     </div>
                     <div className="feature-text" style={{color: '#FFF'}}> 
-                        <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack, một loạt cuộc thi thực tế mới từ Prime Video, tôn vinh mối quan hệ vô song giữa những chú chó và những người bạn đồng hành của chúng. Được tổ chức bởi người đoạt huy chương vàng Lindsey Vonn và con chó Lucy của cô ấy, bộ truyện có mười hai đội chó và cha mẹ con người của chúng trong một cuộc phiêu lưu sử thi trên nhiều lục địa. Tractive tham gia cùng các đội khi họ đi khắp thế giới để đảm bảo mọi thí sinh bốn chân đều an toàn, vui vẻ và có thể theo dõi!</p>
+                        <p style={{fontSize: '15px', marginTop: '10px'}}>The Pack, một loạt cuộc thi thực tế mới từ Prime Video, tôn vinh mối quan hệ vô song giữa những chú chó và những người bạn đồng hành của chúng. Tractive tham gia cùng các đội khi họ đi khắp thế giới để đảm bảo mọi thí sinh bốn chân đều an toàn, vui vẻ và có thể theo dõi!</p>
                         <br/><br/>
                         <strong style={{fontSize: '18px'}}>Bạn không thể chờ đợi để xem?</strong>
                         <br/>

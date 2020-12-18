@@ -65,11 +65,15 @@ export default function ProductDetail(props) {
     }
 
     const { 
-        addToCart
-    } = useContext(CartContext);
+        addToCart,
+        setOpenCartBox,
+        setCloseCartBox
+    } = useContext(CartContext); 
 
     const cartClick = () => {  
-        addToCart(props.product) 
+        addToCart(props.product)     
+        setOpenCartBox(true)
+        setCloseCartBox(false)
     }  
 
     return (
@@ -148,13 +152,18 @@ export default function ProductDetail(props) {
             <div className="productdetail-info"> 
                 <h1>{product.productName}</h1>
                 <div 
-                    className="productdetail-start flex" 
+                    className="productdetail-start flex-col" 
                     onClick={()=>{
                         props.scrollOnClick()
                     }}
                 >
-                    <ReactStars {...ratingStar} />
-                    <p>{product.productVote.length} đánh giá</p>
+                    <div className="productdetail-price-mobile">
+                        <p>{product.productPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}đ</p>
+                    </div>
+                    <div className="flex" style={{alignItems: "center"}}>
+                        <ReactStars {...ratingStar} />
+                        <p>{product.productVote.length} đánh giá</p>
+                    </div>
                 </div> 
                 <div className="productdetail-color">
                     <div className="productdetail-color-color flex">
@@ -193,6 +202,12 @@ export default function ProductDetail(props) {
                     }
                 </ul>
                 <p>{product.productDes}</p>
+                <div 
+                    className="productdetail-addtocart-btn productdetail-addtocart-mobile"
+                    onClick={cartClick} 
+                >
+                    Thêm vào giỏ hàng
+                </div>
             </div>
             <div className="productdetail-addtocart flex-col">
                 <ul className="productdetail-flag-info">

@@ -7,7 +7,7 @@ import {
 import { UserContext } from '../../contexts/User'
 import axios from 'axios' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faSignOutAlt, faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faHome, faSignOutAlt, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 
 function AccountInfo(props) {
 
@@ -121,6 +121,12 @@ function AccountInfo(props) {
     return(
         <div className='Account flex'>
             <div className="account-menu flex-col">
+                <div 
+                    className="account-menu-home"
+                    onClick={()=>{props.history.push("/")}}
+                >
+                    <FontAwesomeIcon icon={faHome} className="icon"/>
+                </div>
                 <div className="account-avt flex-center">
                     <img src={userAvt} alt=""></img>
                     <div className="account-name">{userName}</div>
@@ -128,11 +134,11 @@ function AccountInfo(props) {
                 <div className="account-menu-list">
                     <div className={tab === 0 ? "account-menu-item menu-item-active flex" : "account-menu-item flex"} onClick={()=>{setTab(0)}}>
                         <FontAwesomeIcon icon={faUserAlt} className="icon"/>
-                        My account
+                        Tài khoản
                     </div>
                     <div className={tab === 1 ? "account-menu-item menu-item-active flex" : "account-menu-item flex"} onClick={()=>{setTab(1)}}>
                         <FontAwesomeIcon icon={faFileAlt} className="icon"/>
-                        Orders
+                        Đơn hàng
                     </div>
                     <div className={tab === 2 ? "account-menu-item menu-item-active flex" : "account-menu-item flex"} onClick={()=>{
                         localStorage.removeItem('user-id')
@@ -140,20 +146,20 @@ function AccountInfo(props) {
                         sessionStorage.removeItem('chat-id')
                         window.location.reload(false);}}>
                         <FontAwesomeIcon icon={faSignOutAlt} className="icon"/>
-                        Log out
+                        Đăng xuất
                     </div>
                 </div>
             </div>
             { tab === 0 &&
                 <div className="account-main flex-col">
                     <div className="account-title">
-                        <h1>Account Infomation</h1>
-                        <p>Manage account information for account security</p>
+                        <h1>Thông tin tài khoản</h1>
+                        <p>Quản lý thông tin tài khoản</p>
                     </div>
                     <div className="account-body">
                         <form onSubmit={submitInfo} encType="multipart/form-data" >
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">Name</div>
+                                <div className="account-body-left flex">Tên</div>
                                 <div className="account-body-right">
                                     <input 
                                     className="input"
@@ -166,7 +172,7 @@ function AccountInfo(props) {
                                 </div>
                             </div>
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">Images </div>
+                                <div className="account-body-left flex">Ảnh đại diện </div>
                                 <div className="account-body-right"> 
                                     <input 
                                         className="input"
@@ -209,7 +215,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">Phone number</div>
+                                <div className="account-body-left flex">SĐT</div>
                                 <div className="account-body-right">
                                     <input 
                                         className="input"
@@ -222,7 +228,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">Province</div>
+                                <div className="account-body-left flex">Tỉnh</div>
                                 <div className="account-body-right"> 
                                     <select 
                                         className="input"
@@ -245,7 +251,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">District</div>
+                                <div className="account-body-left flex">Huyện</div>
                                 <div className="account-body-right"> 
                                     <select 
                                         className="input"
@@ -270,7 +276,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">Address</div>
+                                <div className="account-body-left flex">Địa chỉ</div>
                                 <div className="account-body-right"> 
                                     <input 
                                         type="text"
@@ -284,7 +290,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="account-body-row flex">
-                                <div className="account-body-left flex">New password</div>
+                                <div className="account-body-left flex">Mật khẩu mới</div>
                                 <div className="account-body-right"> 
                                     <input 
                                         type="password"
@@ -298,7 +304,7 @@ function AccountInfo(props) {
                                 </div>
                             </div> 
                             <div className="aaccount-body-row flex-center">
-                                <button className="account-btn">Update infomation</button>
+                                <button className="account-btn">Cập nhật tài khoản</button>
                             </div>
                      </form>
                     </div>
@@ -308,27 +314,27 @@ function AccountInfo(props) {
                 tab === 1 && 
                 <div className="account-main flex-col">
                     <div className="account-title">
-                        <h1>Orders Infomation</h1>
-                        <p>List of your orders</p>
+                        <h1>Thông tin đơn đặt hàng</h1>
+                        <p>Danh sách các đơn hàng đã đặt</p>
                     </div>
                     <div className="account-body">
                         <table className="dashboard-table">
                            <tbody>
                               <tr className="dashboard-order"> 
                                  <th className="table-new-title table-order-title"> 
-                                    Shipping info
+                                    Thông tin ship
                                  </th> 
                                  <th className="table-new-title table-order-title"> 
-                                    Date
+                                    Ngày
                                  </th> 
                                  <th className="table-new-title table-order-title"> 
-                                    Payment Method
+                                    Thanh toán
                                  </th> 
                                  <th className="table-new-title table-order-title"> 
-                                    Items
+                                    Số món hàng
                                  </th> 
                                  <th className="table-new-title table-order-title"> 
-                                    Total money
+                                    Tổng đơn hàng
                                  </th> 
                               </tr>
                               {

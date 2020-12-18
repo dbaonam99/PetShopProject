@@ -9,18 +9,25 @@
     font-size: 40px; 
     color: #007FC8;
     margin: 60px;
+    margin-left: 150px;
     width: 300px;
 }
 .login-banner {
     width: 100%;
+    flex-grow: 1; 
+    background: url("https://my.tractive.com/img/649fae4a31597e6d64afac70eb7c2593.jpg") no-repeat center center;  
+    background-size: cover;
     flex-grow: 1;
-    background-position: -350px;
-    background-image: url("https://my.tractive.com/img/649fae4a31597e6d64afac70eb7c2593.jpg");
+    position: absolute;
+    top: 280px;
+    left: 0;
+    right: 0;
+    height: 470px; 
 }
 .login-box {
     position: absolute;
     top: 120px;
-    right: 50px;
+    right: 150px;
     width: 350px; 
     box-shadow: 5px 5px 15px 0 #ccc;
     background-color: #fff;
@@ -86,3 +93,55 @@
 .login-success {
     color: green; 
 }
+ 
+@media only screen and (max-width: 1100px) {    
+    .login-title { 
+        margin-left: 100px;
+    }
+    .login-box { 
+        right: 100px; 
+    }
+}
+@media only screen and (max-width: 950px) {    
+    .login-title { 
+        margin-left: 50px;
+    }
+    .login-box { 
+        right: 50px; 
+    }
+}
+@media only screen and (max-width: 750px) {    
+    .login-title {
+        width: 100%;
+        margin: 0;
+        padding: 30px 200px;
+        text-align: center;
+        font-size: 26px;
+    }
+    .login-box {  
+        position: absolute; 
+        top: 200px;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+}
+@media only screen and (max-width: 600px) {    
+    .login-title { 
+        padding: 30px 150px;
+    }
+}
+@media only screen and (max-width: 500px) {    
+    .login-title { 
+        padding: 30px 100px;
+    }
+}
+@media only screen and (max-width: 400px) {    
+    .login-title { 
+        padding: 30px 50px;
+    }  
+    .login-box {   
+        width: 100%;
+    }
+} 

@@ -8,6 +8,7 @@ export function CartProvider(props) {
     const [clickedCart, setClickedCart] = useState(0)
     const [total, setTotal] = useState(0)
     const [openCartBox, setOpenCartBox] = useState(false)
+    const [closeCartBox, setCloseCartBox] = useState(false)
 
     const isExists = (cartItems = [], item = {}) => {
         for (let cartItem of cartItems) {
@@ -26,7 +27,6 @@ export function CartProvider(props) {
     }, []) 
 
     const addToCart = (product = {}, count) => {
-        setOpenCartBox(true)
         setTimeout(() => { 
             if (count) {
                 setClickedCart(clickedCart + count) // scroll on click to cart
@@ -70,8 +70,8 @@ export function CartProvider(props) {
                 getTotal(virtualCart)
             }
         }, 1000);
-    }
-
+    } 
+    
     const removeFromCart = (event) => {
         const id = event.target.id
         const virtualCart = [...cartItems]
@@ -150,7 +150,9 @@ export function CartProvider(props) {
                 updateCount: updateCount,
                 total: total,
                 openCartBox: openCartBox,
-                setOpenCartBox: setOpenCartBox
+                setOpenCartBox: setOpenCartBox,
+                closeCartBox: closeCartBox,
+                setCloseCartBox: setCloseCartBox
             }}
         >
             {props.children}

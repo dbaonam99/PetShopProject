@@ -1322,12 +1322,6 @@ select {
 .pagnigation-active {
     color: #111 !important;
     text-decoration: none !important;
-}
-.pagnigation_disable {
-    cursor: default;
-    pointer-events: none;
-    color: #eee !important;
-    /* display: none; */
 } 
 @media only screen and (min-width: 1500px) {
     .headerbox {

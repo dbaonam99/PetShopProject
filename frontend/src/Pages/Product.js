@@ -15,6 +15,7 @@ import axios from 'axios';
 function ProductForDog(props) { 
 
     const [product, setProduct] = useState(null)
+    const [news, setNews] = useState([])
 
     useEffect(()=>{
         axios.get(`http://localhost:4000/products`)
@@ -24,6 +25,10 @@ function ProductForDog(props) {
                         setProduct(res.data[i])
                     }
                 }
+            })
+        axios.get(`http://localhost:4000/news`)
+            .then(res => { 
+                setNews(res.data) 
             })
         window.scrollTo(0,0)
     }, [props.location.pathname]) 
@@ -108,7 +113,7 @@ function ProductForDog(props) {
     return (
         <div className="ProductForDog">
             <Header/>
-            { product&&
+            { product &&
                 <ProductDetail
                     product={product}
                     scrollOnClick={handleClick}
@@ -121,7 +126,7 @@ function ProductForDog(props) {
                     product={product}/>
             }
             {/* <ProductRecommend/> */}
-            <ProductNews/>
+            <ProductNews news={news}/>
             <Newsletter/>
             <Footer/>
         </div>

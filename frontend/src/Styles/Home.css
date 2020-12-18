@@ -2,7 +2,7 @@
 .Banner {
     padding-top: 70px;
     width: 100%;
-    height: calc(75vh + 70px);
+    height: 600px; 
 }
 
 .left-banner {
@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 47%;
-    height: 75vh;
+    height: 600px;
 }
 .banner2 {
     background-image: url(../assets/banner2.jpg);
@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 47%;
-    height: 75vh;
+    height: 600px;
 }
 .slider-img-child {
     position: absolute;
@@ -45,7 +45,10 @@
     height: 100%;
 }
 .right-banner {
+    display: flex;
+    flex-direction: column;
     padding: 100px;
+    justify-content: center; 
 }
 .banner-title {
     font-size: 52px;
@@ -570,7 +573,7 @@
     }
 }
 .invitejoin {
-    padding: 50px;
+    padding: 50px; 
 }
 .invitejoin-title {
     text-align: center;
@@ -617,21 +620,148 @@
 .menu-mobile-box {
     width: 450px;
     height: 100%;
-    background: #0b5ca4;
+    background: #007FC8; 
+    animation-name: OpenMenuMobile;
+    animation-duration: .5s;
+}
+.menu-mobile-box-close { 
+    animation-name: CloseMenuMobile;
+    animation-duration: .5s;
+}
+@keyframes OpenMenuMobile {
+    from {
+        transform: translateX(-450px);
+    } to {
+        transform: translateX(0);
+    }
+}
+@keyframes CloseMenuMobile {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-450px);
+    }
+}
+.menu-mobile-row {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.menu-mobile-row-title {
+    color: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.menu-mobile-close {
+    color: #fff;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .right-banner {
+        padding: 50px;
+    }
+    .banner-text {
+        margin-top: 30px;
+    }
+    .top-intro { 
+        padding: 50px 100px; 
+    }
+    .feature-intro {
+        padding: 40px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .banner-title {
+        font-size: 46px;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .banner-title {
+        font-size: 38px;
+    }
+    .left-banner {
+        width: 55%;
+    }
+    .banner-text {
+        margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 1000px) {
     .navbar-item-sub-box-text {
         padding: 30px 100px;
+    }
+    .Banner {
+        flex-direction: column;
+        height: max-content; 
+    }
+    .left-banner, .right-banner {
+        width: 100%;
+    }
+    .banner-btn-list {
+        justify-content: flex-start;
+    }
+    .banner-btn:first-child {
+        margin-right: 20px;
+    }
+    .banner1, .banner2 { 
+        background-position: unset; 
+        width: 100%; 
+    }
+    .slider-img-child { 
+        width: 300px;
+        top: 100px;
+        right: 0px;
+    }
+    .feature-title {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    .Feature {
+        height: 400px;
+    } 
+    .feedback-image, .feedback-text {
+        height: 300px;
     }
 }
 @media only screen and (max-width: 900px) {
     .navbar-item-sub-box-text {
         padding: 30px 80px;
     }
+    .Feature { 
+        flex-direction: column-reverse;
+        height: max-content;
+    }
+    .right-feature, .left-feature {
+        width: 100% !important; 
+    }
+    .flex-order {
+        order: unset;
+    }
+    .left-feature {
+        margin-top: -5px;
+    }
+    .top-intro {
+        padding: 40px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .navbar-item-sub-box-text {
         padding: 20px 60px;
+    }
+    .feedback-image, .feedback-text {
+        height: 250px;
+    }
+    .newsletter-form input {
+        width: 100%;
+    }
+    .Newsletter {
+        padding: 40px;
+    }
+    .newsletter-title, .newsletter-text {
+        text-align: center;
+    }
+    .Footer {
+        padding: 20px 40px;
     }
 }
 @media only screen and (max-width: 750px) {
@@ -648,6 +778,7 @@
     .logo {
         grid-column: 5/9;
         justify-content: center;
+        height: 70px;
     }
     .cart {
         grid-column: 9/13;
@@ -655,5 +786,122 @@
     }
     .account, .navbar {
         display: none !important; 
+    }
+    .slider-img-child { 
+        width: 270px;
+        top: 100px; 
+    }
+    .feedback-image, .feedback-text {
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .banner1, .banner2 { 
+        height: 500px;
+    }
+    .slider-img-child { 
+        width: 200px;
+        top: 100px; 
+    }
+    .right-banner {
+        padding: 20px;
+    }
+    .feedback-box {
+        flex-direction: column;
+    }
+    .feedback-image {
+        height: 300px;
+    }
+    .feedback-text {
+        margin-top: 20px;
+        height: 150px;
+    }
+    .feedback-image, .feedback-text {
+        width: 100%;
+    }
+    .feedback-text {
+        align-items: center;
+        margin: 0;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .banner1, .banner2 { 
+        height: 450px;
+    }
+    .slider-img-child { 
+        width: 200px;
+        top: 100px;
+        right: 0px;
+    }
+    .feedback-image {
+        height: 250px;
+    }
+    .feedback-text {
+        margin-top: 20px; 
+    }
+}
+@media only screen and (max-width: 500px) {
+    .cart-container {
+        width: 100% !important;
+    }
+    .banner1, .banner2 { 
+        height: 400px;
+    }
+    .slider-img-child { 
+        width: 150px;
+        top: 50px; 
+    }
+    .intro-title {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .feedback-image {
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .menu-mobile-box {
+        width: 100%;
+    }
+    .banner1, .banner2 { 
+        height: 300px;
+    } 
+    .top-intro, .feature-intro{
+        padding: 30px 20px;
+    } 
+    .invitejoin {
+        padding: 30px 20px;
+    }
+    .invitejoin-img {
+        flex-direction: column-reverse;
+    }
+    .invitejoin-img img {
+        margin: 10px 0;
+    }
+    .feedback-box {
+        margin: 30px;
+        width: calc(100% - 60px) !important;
+    }
+    .banner-btn-list {
+        flex-direction: column;
+    }
+    .banner-btn {
+        margin: 10px 0 !important;
+        text-align: center;
+    }
+    .feedback-text {
+        margin-bottom: 20px; 
+    }
+    .Newsletter {
+        padding: 30px;
+    }
+    .Footer {
+        padding: 20px 30px;
+    } 
+}
+@media only screen and (max-width: 450px) {
+    .Footer {
+        flex-direction: column;
     }
 }

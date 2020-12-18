@@ -4,6 +4,16 @@
     background-image: linear-gradient(248deg,#209ff8,#20c5f2 100%);
     box-shadow: 5px 0 10px #007FC8;
 }
+.account-menu-home {
+    color: #FFF; 
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
 .account-avt {
     width: 100%;
     height: 250px; 
@@ -95,4 +105,113 @@
     color: #FFF;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1250px) { 
+    .dashboard-table .table-order-title:first-child {
+        width: 250px !important;
+    }
+    .mobile-table td:first-child div p {
+        width: 250px !important;
+    }
+}
+@media only screen and (max-width: 1050px) { 
+    .dashboard-table .table-order-title:first-child {
+        width: 200px !important;
+    }
+    .mobile-table td:first-child div p {
+        width: 200px !important;
+    }
+    .dashboard-table tr th:nth-child(3) {
+        display: none;
+    }
+    .mobile-table td:nth-child(3) {
+        display: none;
+    }
+}
+@media only screen and (max-width: 950px) { 
+    .dashboard-table .table-order-title:first-child {
+        width: 150px !important;
+    }
+    .mobile-table td:first-child div p {
+        width: 150px !important;
+    }
+}
+@media only screen and (max-width: 750px) {  
+    .account-body-row {
+        flex-direction: column;
+    }
+    .account-body-left, .account-body-right {
+        width: 100%;
+    }
+    .account-menu {
+        width: 200px;
+    }
+    .dashboard-table .table-order-title:first-child {
+        width: 100px !important;
+    }
+    .mobile-table td:first-child div p {
+        width: 100px !important;
+    } 
+}
+@media only screen and (max-width: 650px) {   
+    .toast {
+        display: none;
+    }
+    .account-menu {
+        width: 180px;
+    }
+    .account-main {
+        padding: 30px;
+    }
+    .dashboard-table .table-order-title:first-child {
+        width: 80px !important;
+    }
+    .mobile-table td:first-child div p {
+        width: 80px !important;
+    } 
+}
+@media only screen and (max-width: 550px) {   
+    .Account {
+        flex-direction: column;
+    }
+    .account-main {
+        height: max-content;
+    }
+    .account-menu {
+        width: 100%;
+        height: max-content;
+        position: relative;
+    }
+    .account-avt {
+        padding-top: 50px;
+        height: 190px;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .account-name {
+        margin: 0;
+    }
+    .account-menu-list {
+        width: 100%;
+        display: flex;
+        padding: 0;    
+        align-items: center;
+        justify-content: space-around;
+    } 
+    .account-menu-item .icon {
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width: 360px) { 
+    .account-menu-list {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .account-menu-item {
+        margin: 5px 0px;
+    }
 }
