@@ -29,7 +29,7 @@ function OpenChatBtn(props) {
         userInfo
     } = useContext(UserContext); 
 
-    useEffect(() => {
+    useEffect(()=>{
         if (userInfo) {
             setUserName(userInfo.userName)
             setUserEmail(userInfo.userEmail)
@@ -46,6 +46,9 @@ function OpenChatBtn(props) {
                     setChatList(res.data[0].chatContent)
             }
         ) 
+    },[userInfo])
+    
+    useEffect(() => {
         socket.emit('join', {
             sessionId: sessionStorage.getItem('chat-id'),
             isAdmin: false
@@ -62,7 +65,7 @@ function OpenChatBtn(props) {
                 messageRef.current.scrollIntoView({ behavior: "smooth" })
             }, 100)
         })
-    }, [userInfo])
+    }, [])
 
     const handleChange = (event) => {
         setInputValue({...inputValue , [event.target.name]: event.target.value})

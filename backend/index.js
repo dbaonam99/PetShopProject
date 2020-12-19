@@ -6,6 +6,7 @@ const server = http.createServer(app);
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
+const enableWS = require("express-ws");
 
 var Chat = require("./models/chat.model");
 var Notice = require("./models/notice.model");
@@ -29,6 +30,18 @@ app.use(cookieParser('secret'));
 app.use(express.static('public'))
 
 const io = socketIo(server);
+enableWS(app);
+
+const hub = new Map();
+
+app.ws("/subscribe", (ws, req) => {
+  const { apptransid } = req.query;
+  console.log(req.query)
+  hub.set(apptransid, ws);
+  ws.on("close", () => {
+    hub.delete(apptransid);
+  });
+});
 
 app.use(function(req, res, next) {
   res.header('application/json;charset=UTF-8')
@@ -108,8 +121,8 @@ io.on('connection', async function (socket) {
     }, 100)
   })
 
-  socket.on('messageSend-admin',function(data) {
-    Chat.findOne({ sessionId: data.roomId })
+  socket.on('messageSend-admin', async function(data) {
+    await Chat.findOne({ sessionId: data.roomId })
       .updateOne({$push: { chatContent: {fromAdmin: true, text: data.text, time: data.time} }})
       .exec()
     socket.to(data.roomId).emit('admin-msg', data); 

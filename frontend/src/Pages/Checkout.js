@@ -6,7 +6,8 @@ import { useState } from 'react/cjs/react.development';
 import { UserContext } from '../contexts/User';
 import Axios from 'axios';
 import { CartContext } from '../contexts/Cart';
-
+import { ZaloPay } from '../components/zalopay';
+import QRCode from 'qrcode.react'
 
 function Checkout(props) {
 
@@ -23,6 +24,7 @@ function Checkout(props) {
     const [huyen, setHuyen] = useState([])
 
     const [userName, setUserName] = useState("")
+    const [_id, set_Id] = useState("")
     const [userAvt, setUserAvt] = useState("")
     const [userPhone, setUserPhone] = useState("")
     const [userEmail, setUserEmail] = useState("")
@@ -32,8 +34,11 @@ function Checkout(props) {
     const [provinceId, setProvinceId] = useState("")
     const [checkoutTab, setCheckoutTab] = useState(0)
     const [shipping, setShipping] = useState(".0")
-    const [orderPaymentMethod, setOrderPaymentMethod] = useState("")
+    // const [orderPaymentMethod, setOrderPaymentMethod] = useState("")
     // const [orderAddressConfirm, setOrderAddressConfirm] = useState("")
+    const [isShowQR, setIsShowQR] = useState(false)
+    const [qrValue, setQRValue] = useState("")
+    const [isPaid, setIsPaid] = useState(false)
 
     useEffect(()=>{
         window.scrollTo(0,0)  
@@ -43,6 +48,7 @@ function Checkout(props) {
         .then(res => {  
             setUserInfoFunc(res.data.user);
             const userInfo = res.data.user
+            set_Id(userInfo._id)
             setUserName(userInfo.userName)
             setUserAvt(userInfo.userAvt)
             setUserPhone(userInfo.userPhone)
@@ -81,51 +87,75 @@ function Checkout(props) {
         setMethodPayMent(Number(event.target.id))
     } 
 
-    const placeAnOrder = () => {
-        let orderPaymentMethod2 = "";
-        if (methodPayment === 1) {
-            orderPaymentMethod2 = "thanh toan khi nhan hang"
-        } else if (methodPayment === 2) {
-            orderPaymentMethod2 = "zalopay"
-        } else {
-            orderPaymentMethod2 = ""
-        }
+    const showQR = (text) => {
+        setIsShowQR(true) 
+        setQRValue(text)
+    }
+      
+    const hideQR = () => {
+        setIsShowQR(false)
+    }
 
-        var cartId = []
-        for (let i in cartItems) {
-            cartId.push(
-                {
-                    id: cartItems[i]._id,
-                    amount: cartItems[i].count 
-                }
-            )
-        }
-        if (orderPaymentMethod2 === "") {
-            alert("Hãy chọn phương thức thanh toán")
-        } else {
-            const data = {
-                orderName: userName,
-                orderAvatar: userAvt,
-                orderEmail: userEmail,
-                orderPhone: userPhone,
-                orderAddress: userAddress,
-                orderTinh: userProvince,
-                orderHuyen: userDistrict,
-                orderList: cartId,
-                orderTotal: total,
-                orderPaymentMethod: orderPaymentMethod2,
-                orderDate: new Date()
-            }
-            Axios.post('http://localhost:4000/order', data)
-            setTimeout(()=>{
-                // setConfirm(true)
-                // document.body.style.overflow = 'hidden';
-                // window.scrollTo(0,0);
-                props.history.push("/")
-                // socket.emit('placeAnOrder', data)
-            }, 1000)
-        }
-        setOrderPaymentMethod(orderPaymentMethod2)
+    const placeAnOrder = () => {
+
+        // let orderPaymentMethod2 = "";
+        // if (methodPayment === 1) {
+        //     orderPaymentMethod2 = "thanh toan khi nhan hang"
+        // } else if (methodPayment === 2) {
+        //     orderPaymentMethod2 = "zalopay"
+        // } else {
+        //     orderPaymentMethod2 = ""
+        // }
+
+        // const description = `Thanh toan don hang #${_id}` 
+        // let order = {
+        //     description: description,
+        //     amount: total
+        // }  
+        // ZaloPay.qr(order, res => { 
+        //     // showQR(res.orderurl);
+        //     // // $web2appLink.attr('href', res.orderurl);  
+        //     ZaloPay.listenCallback(res.apptransid, hideQR); 
+        // }); 
+        // if (orderPaymentMethod2 === "zalopay" && isPaid === false) {
+        //     alert("Bạn chưa hoàn tất thanh toán!")
+        //     return
+        // } 
+        // var cartId = []
+        // for (let i in cartItems) {
+        //     cartId.push(
+        //         {
+        //             id: cartItems[i]._id,
+        //             amount: cartItems[i].count 
+        //         }
+        //     )
+        // }
+        // if (orderPaymentMethod2 === "") {
+        //     alert("Hãy chọn phương thức thanh toán")
+        // } else {
+        //     const data = {
+        //         orderName: userName,
+        //         orderAvatar: userAvt,
+        //         orderEmail: userEmail,
+        //         orderPhone: userPhone,
+        //         orderAddress: userAddress,
+        //         orderTinh: userProvince,
+        //         orderHuyen: userDistrict,
+        //         orderList: cartId,
+        //         orderTotal: total,
+        //         orderPaymentMethod: orderPaymentMethod2,
+        //         orderDate: new Date()
+        //     }
+        //     Axios.post('http://localhost:4000/order', data)
+        //     setTimeout(()=>{
+        //         // setConfirm(true)
+        //         // document.body.style.overflow = 'hidden';
+        //         // window.scrollTo(0,0);
+        //         props.history.push("/")
+        //         // socket.emit('placeAnOrder', data)
+        //     }, 1000)
+        // }
+        // setOrderPaymentMethod(orderPaymentMethod2)
         // let addressStr = userAddress + ', ' + userProvince + ', ' + userDistrict
         // setOrderAddressConfirm(addressStr)
     }
@@ -254,7 +284,9 @@ function Checkout(props) {
                                     className="checkout-info-row flex-center"
                                     onClick={()=>{
                                         setCheckoutTab(1)
-                                        window.scrollTo(0,0)
+                                        if (window.innerWidth >= 750) {
+                                            window.scrollTo(0,0)
+                                        }
                                     }}
                                 >
                                     <div className="checkout-info-btn">Tiếp theo</div>
@@ -270,22 +302,45 @@ function Checkout(props) {
                                 <input 
                                     type="radio" id="1" name="ship" className="payment-method"
                                     onChange={checkedPayMent}
+                                    onClick={()=>{
+                                        setIsShowQR(false) 
+                                    }}
                                 ></input>
-                                <label htmlFor="1" className="payment-method-label">
-                                    <img src="http://pe.heromc.net:4000/images/fb3915cdb6d7e6dec3b6611cb82cd291"></img>
+                                <label 
+                                    htmlFor="1" className="payment-method-label"
+                                >
+                                    <img src="http://pe.heromc.net:4000/images/fb3915cdb6d7e6dec3b6611cb82cd291" alt=""></img>
                                     Thanh toán khi nhận hàng
                                 </label> 
                             </div>
-                            <div className="checkout-detail-ship-item flex"> 
+                            <div 
+                                className="checkout-detail-ship-item flex"
+                            > 
                                 <input 
                                     type="radio" id="2" name="ship" className="payment-method"
                                     onChange={checkedPayMent}
+                                    onClick={()=>{  
+                                        const description = `Thanh toan don hang #${_id}` 
+                                        let order = {
+                                            description: description,
+                                            amount: total
+                                        }  
+                                        ZaloPay.qr(order, res => { 
+                                            showQR(res.orderurl);
+                                            // console.log(res)
+                                            // // $web2appLink.attr('href', res.orderurl);  
+                                            // ZaloPay.listenCallback(res.apptransid, hideQR); 
+                                        }); 
+                                    }}
                                 ></input>
                                 <label htmlFor="2" className="payment-method-label">
                                     <img src="https://stccbo.zalopay.vn/zalopay-public/websites/ver201022/images/logozlp1.png" alt=""></img>
                                     ZaloPay
                                 </label>
-                            </div>
+                            </div> 
+                            <div className={isShowQR ? "" : "d-none"}>
+                                <QRCode value={qrValue}></QRCode> 
+                            </div> 
                             <div 
                                 className="checkout-info-row flex-center"
                                 onClick={placeAnOrder}

@@ -97,8 +97,8 @@ export default function DashboardInbox(props) {
     // }
 
     const [openTimeTooltip, setOpenTimeTooltip] = useState("")
+ 
 
-    console.log(roomIndex)
     return (
         <div className="boxchat-admin flex">
             <div className="boxchat-left">
@@ -173,7 +173,7 @@ export default function DashboardInbox(props) {
                                         }
                                         { !item.userInfo && 
                                             <img 
-                                                src={"http://localhost:4000/images/16f9bbf512b66a228f7978e34d8fb163"}
+                                                src="https://icon-library.com/images/avatar-icon-png/avatar-icon-png-8.jpg"
                                                 alt=""
                                             ></img>
                                         }
@@ -221,7 +221,7 @@ export default function DashboardInbox(props) {
                                     }
                                     { !sortDateChat[Number(roomIndex)].userInfo && 
                                         <img 
-                                            src={"http://localhost:4000/images/16f9bbf512b66a228f7978e34d8fb163"}
+                                            src="https://icon-library.com/images/avatar-icon-png/avatar-icon-png-8.jpg"
                                             alt=""
                                         ></img>
                                     }
@@ -360,7 +360,7 @@ export default function DashboardInbox(props) {
                                 }
                                 { !sortDateChat[Number(roomIndex)].userInfo && 
                                     <img 
-                                        src={"http://localhost:4000/images/16f9bbf512b66a228f7978e34d8fb163"}
+                                        src="https://icon-library.com/images/avatar-icon-png/avatar-icon-png-8.jpg"
                                         alt=""
                                     ></img>
                                 }
