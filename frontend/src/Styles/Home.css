@@ -67,6 +67,9 @@
     justify-content: space-around;
 }
 .banner-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer; 
     color: #fff;
     font-size: 20px;

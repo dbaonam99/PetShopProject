@@ -129,12 +129,12 @@ class ZaloPay {
       appid: config.appid,
       apptransid,
     };
+
     params.mac = Crypto.Mac.GetOrderStatus(params);
 
     const { data: result } = await axios.post(config.api.getorderstatus, null, {
       params,
-    });
-
+    }); 
     return result;
   }
 

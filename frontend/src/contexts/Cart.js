@@ -69,7 +69,7 @@ export function CartProvider(props) {
                 setCartItems(virtualCart)
                 getTotal(virtualCart)
             }
-        }, 1000);
+        }, 500);
     } 
     
     const removeFromCart = (event) => {
